@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Part5
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=toCopy
+comment2.target=int[]\ arrayCopy(int[])
+numComments=3
