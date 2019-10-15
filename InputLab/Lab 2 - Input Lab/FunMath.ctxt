@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=FunMath
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=question
+comment2.target=int\ quizUser(java.lang.String)
+numComments=3
