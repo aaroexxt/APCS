@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=IntegerSearch
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=toFind
+comment2.target=int\ lookup(int)
+numComments=3
