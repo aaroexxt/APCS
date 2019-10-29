@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=QuadraticEquation
+comment1.params=a\ b\ c
+comment1.target=QuadraticEquation(int,\ int,\ int)
+comment2.params=
+comment2.target=double\ getDiscriminant()
+comment3.params=
+comment3.target=double\ getSolution1()
+comment4.params=
+comment4.target=double\ getSolution2()
+numComments=5

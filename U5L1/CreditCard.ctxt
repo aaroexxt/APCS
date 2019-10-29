@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=CreditCard
+comment1.params=
+comment1.target=CreditCard()
+comment2.params=amount
+comment2.target=void\ payment(double)
+comment3.params=amount
+comment3.target=void\ purchase(double)
+comment4.params=
+comment4.target=double\ getBalance()
+numComments=5
