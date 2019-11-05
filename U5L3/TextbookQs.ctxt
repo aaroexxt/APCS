@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=TextbookQs
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=originalString
+comment2.target=java.lang.String\ removeDashes(java.lang.String)
+comment3.params=original
+comment3.target=java.lang.String\ scroll(java.lang.String)
+comment4.params=name
+comment4.target=java.lang.String\ convertName(java.lang.String)
+comment5.params=toReverse
+comment5.target=java.lang.String\ reverseString(java.lang.String)
+comment6.params=check
+comment6.target=boolean\ digits(java.lang.String)
+numComments=7
