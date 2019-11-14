@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MyPod
+comment1.params=color\ memCapacity\ songLibrary
+comment1.target=MyPod(java.lang.String,\ double,\ java.util.ArrayList)
+comment2.params=
+comment2.target=MyPod()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
