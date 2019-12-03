@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Transaction
+comment1.params=
+comment1.target=Transaction()
+comment2.params=lastTransaction\ transactionDate\ newOwner\ cost
+comment2.target=Transaction(Transaction,\ java.time.LocalDate,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=int\ getCost()
+comment3.text=\r\n\ GETTERS/SETTERS\r\n
+comment4.params=newCost
+comment4.target=void\ setCost(int)
+numComments=5
