@@ -42,6 +42,12 @@ public class Transaction {
     public boolean getAccepted() {
         return accepted;
     }
+    public String getNewOwner() {
+        return newOwner;
+    }
+    public String getPrevOwner() {
+        return prevOwner;
+    }
     /*
      * 'COMPARE TO' FOR SORTING
      */

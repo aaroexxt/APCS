@@ -27,15 +27,19 @@ public class Skateboard {
         type = SkateboardType.STANDARD;
         deck = new SkateboardDeck();
         wheel = new SkateboardWheel();
-        odometer = 0;
+        odometer = 0.0;
         //Add a default transaction - purchase from manufacturer
+        transactions.clear();
         transactions.add(new Transaction());
     }
     public Skateboard(SkateboardType type, SkateboardDeck deck, SkateboardWheel wheel) {
         this.type = type;
         this.deck = deck;
         this.wheel = wheel;
+        odometer = 0.0;
         //Add a default transaction - purchase from manufacturer
+        transactions.clear();
+        transactions.add(new Transaction());
     }
     /*
      * GETTER/SETTER METHODS
@@ -84,6 +88,13 @@ public class Skateboard {
     public void sortTransactions() {
         Collections.sort(transactions, Transaction.costComparator); //Uses the Collections helper to sort the objects using Transaction's custom compareTo function
     }
+    public String getCurrentOwner() {
+        sortTransactions(); //sort to get updated owner - highest cost will be first
+        //Now poll for last transaction
+        Transaction lastTransaction = transactions.get(transactions.size()-1);
+        //Aaaand return the newest owner
+        return lastTransaction.getNewOwner();
+    }
     /*
      * RIDE THE BOARD
      */
@@ -112,8 +123,10 @@ public class Skateboard {
         output+="Wheel:\n"+wheel+"\n\n";
         output+="Odometer: "+odometer+"\n\n";
         output+="Transactions:\n";
-        for (Transaction t : transactions) {
-            output+=t+"\n";
+        int counter = 0;
+        while (counter < transactions.size()) {
+            output+=transactions.get(counter)+"\n";
+            counter++;
         }
         return output;
     }
