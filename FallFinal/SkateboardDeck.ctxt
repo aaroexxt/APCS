@@ -2,6 +2,15 @@
 comment0.target=SkateboardDeck
 comment1.params=
 comment1.target=SkateboardDeck()
+comment1.text=\n\ CONSTRUCTORS\n
 comment2.params=width\ length\ gTP\ manufacturer
 comment2.target=SkateboardDeck(int,\ int,\ boolean,\ java.lang.String)
-numComments=3
+comment3.params=
+comment3.target=int\ getWidth()
+comment3.text=\n\ GETTERS/SETTERS\n
+comment4.params=
+comment4.target=int\ getLength()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ TOSTRING\n
+numComments=6

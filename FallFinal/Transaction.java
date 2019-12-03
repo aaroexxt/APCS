@@ -6,7 +6,7 @@ public class Transaction {
     private LocalDate transactionDate;
     private String prevOwner;
     private String newOwner;
-    private int cost;
+    private int cost; //$$$ usd
     boolean accepted;
     
     public Transaction() {
@@ -38,5 +38,30 @@ public class Transaction {
     }
     public void setCost(int newCost) {
         cost = newCost;
+    }
+    public boolean getAccepted() {
+        return accepted;
+    }
+    /*
+     * 'COMPARE TO' FOR SORTING
+     */
+    public static Comparator<Transaction> costComparator = new Comparator<Transaction>() {
+        public int compare(Transaction t1, Transaction t2) {
+            int t1C = t1.getCost();
+            int t2C = t2.getCost();
+            return (t1C < t2C) ? -1 : (t1C == t2C) ? 0 : 1;
+        }
+    };
+    /*
+     * TOSTRING
+     */
+    public String toString() {
+        String output = "";
+        output+="Accepted: "+accepted;
+        output+=", Cost: "+cost;
+        output+=", PrevOwner: "+prevOwner;
+        output+=", NewOwner: "+newOwner;
+        output+=", transactionDate: "+transactionDate;
+        return output;
     }
 }
