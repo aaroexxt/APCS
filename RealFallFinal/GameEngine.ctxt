@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameEngine
-comment1.params=shapes
+comment1.params=shapePassIn
 comment1.target=GameEngine(java.lang.Object[])
 comment2.params=
 comment2.target=java.lang.String\ toString()

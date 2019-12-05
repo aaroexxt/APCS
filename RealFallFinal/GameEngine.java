@@ -4,25 +4,25 @@ import java.lang.reflect.*;
 
 public class GameEngine {
     //ArrayList of generic Objects so that user can pass in any type of shape
-    private ArrayList<Object> shapeArray = new ArrayList<Object>();
+    private ArrayList<Object> shapes = new ArrayList<Object>();
 
-    public GameEngine(Object ...shapes) {
-        System.out.println("Number of shapes: "+shapes.length);
-        for (Object s : shapes) {
-            shapeArray.add(s);
+    public GameEngine(Object ...shapePassIn) {
+        System.out.println("Number of shapes: "+shapePassIn.length);
+        for (Object s : shapePassIn) {
+            shapes.add(s);
         }
     }
 
     public String toString() {
         String output = "";
-        for (Object s : shapeArray) {
+        for (Object s : shapes) {
             output+= s+"\n";
         }
         return output;
     }
     
     public Object getShape(int index) {
-        return shapeArray.get(index);
+        return shapes.get(index);
     }
     
     public String[] getShapeStringTable(int index) {
