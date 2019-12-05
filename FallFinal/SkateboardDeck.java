@@ -13,8 +13,15 @@ public class SkateboardDeck {
         manufacturer = "Globe Skateboards";
     }
     public SkateboardDeck(int width, int length, boolean gTP, String manufacturer) {
-        this.width = width;
-        this.length = length;
+        if (width < 0 || length < 0) {
+            SkateboardDeck defaultDeck = new SkateboardDeck(); //Overload with default constructor
+            this.width = defaultDeck.width;
+            this.length = defaultDeck.length;
+            throw new IllegalArgumentException();
+        } else {
+            this.width = width;
+            this.length = length;
+        }
         this.gripTapePresent = gTP;
         this.manufacturer = manufacturer;
     }

@@ -11,8 +11,15 @@ public class SkateboardWheel {
         manufacturer = "Test Manufacturer";
     }
     public SkateboardWheel(int hardness, int diameter, String manufacturer) {
-        this.hardness = hardness;
-        this.diameter = diameter;
+        if (hardness < 0 || diameter < 0) {
+            SkateboardWheel defaultWheel = new SkateboardWheel(); //Overload with default constructor
+            this.hardness = defaultWheel.hardness;
+            this.diameter = defaultWheel.diameter;
+            throw new IllegalArgumentException();
+        } else {
+            this.hardness = hardness;
+            this.diameter = diameter;
+        }
         this.manufacturer = manufacturer;
     }
     /*

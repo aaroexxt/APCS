@@ -13,7 +13,7 @@ public class Skateboard {
     private SkateboardType type;
     //Components of skateboard
     private SkateboardDeck deck;
-    private SkateboardWheel wheel;
+    private SkateboardWheel[] wheels;
     //Odometer - how far have we travelled
     double odometer;
     //List of transactions for this board
@@ -26,16 +26,19 @@ public class Skateboard {
         //Use default constructors
         type = SkateboardType.STANDARD;
         deck = new SkateboardDeck();
-        wheel = new SkateboardWheel();
+        wheels = new SkateboardWheel[4];
+        for (int i=0; i<wheels.length; i++) {
+            wheels[i] = new SkateboardWheel();
+        }
         odometer = 0.0;
         //Add a default transaction - purchase from manufacturer
         transactions.clear();
         transactions.add(new Transaction());
     }
-    public Skateboard(SkateboardType type, SkateboardDeck deck, SkateboardWheel wheel) {
+    public Skateboard(SkateboardType type, SkateboardDeck deck, SkateboardWheel wheels[]) {
         this.type = type;
         this.deck = deck;
-        this.wheel = wheel;
+        this.wheels = wheels;
         odometer = 0.0;
         //Add a default transaction - purchase from manufacturer
         transactions.clear();
@@ -51,14 +54,14 @@ public class Skateboard {
     public SkateboardDeck getDeck() {
         return deck;
     }
-    public SkateboardWheel getWheel() {
-        return wheel;
+    public SkateboardWheel[] getWheels() {
+        return wheels;
     }
     //Essentially a "setter" method for both deck and wheel
-    public void upgrade(SkateboardDeck newDeck, SkateboardWheel newWheel, int newCost) {
+    public void upgrade(SkateboardDeck newDeck, SkateboardWheel[] newWheels, int newCost) {
         //First, set the deck and wheels to the new objects
         deck = newDeck;
-        wheel = newWheel;
+        wheels = newWheels;
         //Next, update the cost for the latest transaction
         sortTransactions(); //first, sort transactions
         transactions.get(transactions.size()-1).setCost(newCost); //Set cost
@@ -100,8 +103,16 @@ public class Skateboard {
      */
     double ride(boolean isRotations, double distanceOrRotations) {
         if (isRotations) {
-            int diameter = wheel.getDiameter();
-            double circumference = Math.PI*(double)diameter;
+            //Find average wheel diameter by adding and then dividing by total
+            double avgDiameter = (double)wheels[0].getDiameter();
+            int counter = 1;
+            do {
+                avgDiameter += wheels[counter].getDiameter();
+                counter++;
+            } while (counter < wheels.length);
+            avgDiameter/=wheels.length;
+            
+            double circumference = Math.PI*avgDiameter;
             odometer+=circumference*distanceOrRotations;
         } else {
             odometer+=distanceOrRotations;
@@ -113,6 +124,27 @@ public class Skateboard {
         return odometer;
     }
     /*
+     * USE
+     */
+    public String getUseCase() {
+        String output = "";
+        switch (type) {
+            case STANDARD:
+                output = "For use in parks and on the streets";
+                break;
+            case CRUISER:
+                output = "For use on the streets and crusing around due to its long kicktail";
+                break;
+            case OLDSCHOOL:
+                output = "For use in pools or ramps or carving";
+                break;
+            case LONGBOARD:
+                output = "For use in transportation or carving";
+                break;
+        }
+        return output;
+    }
+    /*
      * TOSTRING
      */
     public String toString() {
@@ -120,7 +152,11 @@ public class Skateboard {
         output+="Type: "+type+"\n\n";
         //uses toString methods in deck and wheel
         output+="Deck:\n"+deck+"\n\n";
-        output+="Wheel:\n"+wheel+"\n\n";
+        output+="Wheels:\n";
+        for (SkateboardWheel w : wheels) {
+            output+=w+"\n";
+        }
+        output+="\n\n";
         output+="Odometer: "+odometer+"\n\n";
         output+="Transactions:\n";
         int counter = 0;
