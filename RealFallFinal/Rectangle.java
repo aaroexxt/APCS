@@ -9,6 +9,9 @@ public class Rectangle {
     private char[][] charTableInternal;
     private String[] stringTableInternal;
 
+    //Positional coordinates on the screen with (0, 0) at top left
+    private Position position = new Position();
+
     /*
     * CONSTRUCTORS
     */
@@ -22,11 +25,9 @@ public class Rectangle {
 
         stringTableInternal = new String[height];
         regenStringTable();
-
-        System.out.println(stringTableInternal[0]);
     }
 
-    public Rectangle(int width, int height, boolean filled) {
+    public Rectangle(int x, int y, int width, int height, boolean filled) {
         this.width = width*2; //because height is x2 in java, multiply width by 2
         this.height = height;
         this.filled = filled;
@@ -36,6 +37,8 @@ public class Rectangle {
 
         stringTableInternal = new String[height];
         regenStringTable();
+
+        position.setPosition(x,y); //update position onscreen
     }
 
     /*
@@ -47,6 +50,7 @@ public class Rectangle {
     }
     public void setWidth(int newWidth) {
         width = newWidth;
+        regenStringTable();
     }
 
     public int getHeight() {
@@ -54,6 +58,7 @@ public class Rectangle {
     }
     public void setHeight(int newHeight) {
         height = newHeight;
+        regenStringTable();
     }
 
     public char getFillChar() {
@@ -61,6 +66,7 @@ public class Rectangle {
     }
     public void setFillChar(char newChar) {
         fillChar = newChar;
+        regenStringTable();
     }
 
     public boolean getFilled() {
@@ -68,6 +74,7 @@ public class Rectangle {
     }
     public void setFilled(boolean isFilled) {
         filled = isFilled;
+        regenStringTable();
     }
 
     /*
@@ -120,11 +127,24 @@ public class Rectangle {
     public String[] getStringTable() {
         return stringTableInternal;
     }
+
+    /*
+     * GetPosition
+    */
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(int x, int y) {
+        position.x = x;
+        position.y = y;
+    }
     
     /*
      * TOSTRING
      */
     public String toString() {
-        return "Type: Rectangle, width: "+width+", height: "+height+", fillChar: "+fillChar+", isFilled: "+filled;
+        return "Type: Rectangle, width: "+width+", height: "+height+", fillChar: "+fillChar+", isFilled: "+filled+", position: "+position;
     }
 }

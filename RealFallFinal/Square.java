@@ -1,12 +1,15 @@
 public class Square {
     //Basic parameters; height and length as well as what character to fill with
     private int sideLength;
-    private char fillChar = '*';
+    private char fillChar = 'a';
     private boolean filled;
 
     //charTable and StringTable for rendering
     private char[][] charTableInternal;
     private String[] stringTableInternal;
+
+    //Positional coordinates on the screen with (0, 0) at top left
+    private Position position = new Position();
 
     /*
     * CONSTRUCTORS
@@ -22,7 +25,7 @@ public class Square {
         regenStringTable();
     }
 
-    public Square(int sideLength, boolean filled) {
+    public Square(int x, int y, int sideLength, boolean filled) {
         this.sideLength = sideLength;
         this.filled = filled;
 
@@ -31,6 +34,8 @@ public class Square {
 
         stringTableInternal = new String[sideLength];
         regenStringTable();
+
+        position.setPosition(x,y); //update position onscreen
     }
 
     /*
@@ -42,6 +47,7 @@ public class Square {
     }
     public void setSideLength(int newSL) {
         sideLength = newSL;
+        regenStringTable();
     }
 
     public char getFillChar() {
@@ -49,6 +55,7 @@ public class Square {
     }
     public void setFillChar(char newChar) {
         fillChar = newChar;
+        regenStringTable();
     }
 
     public boolean getFilled() {
@@ -56,6 +63,7 @@ public class Square {
     }
     public void setFilled(boolean isFilled) {
         filled = isFilled;
+        regenStringTable();
     }
 
     /*
@@ -107,6 +115,19 @@ public class Square {
 
     public String[] getStringTable() {
         return stringTableInternal;
+    }
+
+    /*
+     * GetPosition
+    */
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(int x, int y) {
+        position.x = x;
+        position.y = y;
     }
     
     /*
