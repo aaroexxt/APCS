@@ -7,11 +7,11 @@ public class Position {
         y = 0;
     }
     public Position(int x, int y) {
-        this.x = x;
+        this.x = x*2;
         this.y = y;
     }
     public void setPosition(int nX, int nY) {
-    	this.x = nX;
+    	this.x = nX*2;
     	this.y = nY;
     }
 
