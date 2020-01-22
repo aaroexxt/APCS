@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=hw
+comment1.params=n
+comment1.target=void\ countdown(int)
+comment1.text=\n\ a)\ 113\n\ b)\ 140,70\n\ c)\ 168,84,42\n\ d)\ 120,60,30\n\ e)\ 160,80,40,20,10\n
+comment2.params=n
+comment2.target=void\ descending(int)
+comment3.params=x\ m
+comment3.target=int\ exp(int,\ int)
+comment4.params=
+comment4.target=void\ main()
+numComments=5
