@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=MergeSorter
+comment0.text=\n\ \ \ The\ sort\ method\ of\ this\ class\ sorts\ an\ array,\ using\ the\ merge\ \n\ \ \ sort\ algorithm.\n
+comment1.params=
+comment1.target=void\ resetCounter()
+comment1.text=\n\ \ \ \ \ \ Sorts\ an\ array,\ using\ merge\ sort.\n\ \ \ \ \ \ @param\ a\ the\ array\ to\ sort\n
+comment2.params=
+comment2.target=int\ getCounter()
+comment3.params=a
+comment3.target=void\ sort(int[])
+comment4.params=first\ second\ a
+comment4.target=void\ merge(int[],\ int[],\ int[])
+comment4.text=\n\ \ \ \ \ \ Merges\ two\ sorted\ arrays\ into\ an\ array\n\ \ \ \ \ \ @param\ first\ the\ first\ sorted\ array\n\ \ \ \ \ \ @param\ second\ the\ second\ sorted\ array\n\ \ \ \ \ \ @param\ a\ the\ array\ into\ which\ to\ merge\ first\ and\ second\n
+numComments=5

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=stars
+comment1.params=n
+comment1.target=void\ printStars(int)
+comment2.params=n
+comment2.target=void\ printTriangleIterativeA(int)
+comment3.params=n
+comment3.target=void\ printTriangleIterativeB(int)
+comment4.params=n
+comment4.target=void\ printTriangleRecursiveA(int)
+comment5.params=n\ max
+comment5.target=void\ printTriangleRecursiveAReal(int,\ int)
+comment6.params=n
+comment6.target=void\ printTriangleRecursiveB(int)
+comment7.params=
+comment7.target=void\ main()
+numComments=8

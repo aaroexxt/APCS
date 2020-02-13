@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Lab2
+comment1.params=a\ b
+comment1.target=int\ exponent(int,\ int)
+comment2.params=cookies\ kids
+comment2.target=int\ initialCookies(int,\ int)
+comment3.params=word\ n
+comment3.target=java.lang.String\ rotateLeft(java.lang.String,\ int)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
