@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Card
+comment1.params=
+comment1.target=Card()
+comment2.params=n
+comment2.target=Card(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=boolean\ isExpired()
+comment5.params=
+comment5.target=java.lang.String\ format()
+numComments=6
