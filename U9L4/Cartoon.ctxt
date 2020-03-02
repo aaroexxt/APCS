@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Cartoon
+comment1.params=n\ pb\ price\ yearPb
+comment1.target=Cartoon(java.lang.String,\ java.lang.String,\ double,\ int)
+comment2.params=
+comment2.target=double\ ComputeSalePrice()
+numComments=3

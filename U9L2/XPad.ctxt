@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=XPad
+comment1.params=
+comment1.target=XPad()
+comment2.params=memory\ color\ time\ isPM
+comment2.target=XPad(int,\ java.lang.String,\ java.lang.String,\ boolean)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

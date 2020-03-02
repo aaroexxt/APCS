@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MyWatch
+comment1.params=
+comment1.target=MyWatch()
+comment2.params=memory\ color\ time\ isPM
+comment2.target=MyWatch(int,\ java.lang.String,\ java.lang.String,\ boolean)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

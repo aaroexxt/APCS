@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MyDevice
+comment1.params=
+comment1.target=MyDevice()
+comment2.params=memory\ color
+comment2.target=MyDevice(int,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
