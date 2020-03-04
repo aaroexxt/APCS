@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Employee
+comment1.params=
+comment1.target=Employee()
+comment10.params=hours
+comment10.target=void\ setHours(int)
+comment2.params=vacationForm\ hours\ salary\ vacationDays
+comment2.target=Employee(java.lang.String,\ int,\ int,\ int)
+comment3.params=
+comment3.target=java.lang.String\ applyForVacation()
+comment4.params=
+comment4.target=int\ showHours()
+comment5.params=
+comment5.target=double\ showSalary()
+comment6.params=
+comment6.target=int\ showVacation()
+comment7.params=vacationForm
+comment7.target=void\ setForm(java.lang.String)
+comment8.params=vacationDays
+comment8.target=void\ setVacation(int)
+comment9.params=salary
+comment9.target=void\ setSalary(double)
+numComments=11
