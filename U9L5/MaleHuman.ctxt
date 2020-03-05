@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MaleHuman
+comment1.params=type
+comment1.target=void\ eat(java.lang.String)
+comment2.params=
+comment2.target=int\ numberInTheHouse()
+numComments=3
