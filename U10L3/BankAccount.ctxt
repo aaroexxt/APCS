@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=BankAccount
+comment1.params=other
+comment1.target=int\ compareTo(BankAccount)
+comment1.text=\r\n\ \ \ \ Compares\ two\ bank\ accounts.\r\n\ \ \ \ @param\ other\ the\ other\ BankAccount\r\n\ \ \ \ @return\ 1\ if\ this\ bank\ account\ has\ a\ greater\ balance\ than\ the\ other\r\n\ \ \ \ one,\r\n\ \ \ \ -1\ if\ this\ bank\ account\ is\ has\ a\ smaller\ balance\ than\ the\ other\ one,\r\n\ \ \ \ and\ 0\ if\ both\ bank\ accounts\ have\ the\ same\ balance\r\n
+comment2.params=
+comment2.target=double\ getBalance()
+comment3.params=balance
+comment3.target=void\ setBalance(double)
+comment4.params=amount
+comment4.target=BankAccount(double)
+numComments=5
