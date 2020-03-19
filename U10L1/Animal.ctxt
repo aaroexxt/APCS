@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Animal
+comment1.params=wings\ legs
+comment1.target=Animal(boolean,\ boolean)
+comment2.params=
+comment2.target=void\ eat()
+comment3.params=
+comment3.target=void\ hair()
+comment4.params=
+comment4.target=void\ sound()
+numComments=5

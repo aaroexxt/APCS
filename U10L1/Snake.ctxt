@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Snake
+comment1.params=name
+comment1.target=Snake(java.lang.String)
+comment2.params=
+comment2.target=void\ eat()
+comment3.params=
+comment3.target=void\ hair()
+comment4.params=
+comment4.target=void\ sound()
+comment5.params=
+comment5.target=void\ movement()
+numComments=6
