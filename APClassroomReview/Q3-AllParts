@@ -1,0 +1,29 @@
+public static int hailstoneLength(int n) {
+	int curNum = n;
+	int steps = 0;
+	while (curNum != 1) {
+		if (curNum % 2 == 0) {
+			curNum/=2;
+		} else {
+			curNum*=3;
+			curNum++;
+		}
+		steps++;
+	}
+	return steps+1;
+}
+
+public static boolean isLongSeq(int n) {
+	return hailstoneLength(n) > n;
+}
+
+public static double propLong(int n) {
+	int longCount = 0;
+	for (int i=1; i<=n; i++) { //1 and n, inclusive
+		if (isLongSeq(i)) {
+			longCount++;
+		}
+	}
+
+	return (double)longCount/(double)n;
+}

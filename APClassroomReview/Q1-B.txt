@@ -1,0 +1,17 @@
+/** Determines whether str is a palindrome and prints a message
+
+* indicating the result, as described in part (b).
+
+* Precondition: str contains only lowercase letters and spaces.
+
+*/
+
+public static void palindromeChecker(String str) {
+	str = removeSpaces(str); //Remove the spaces
+
+	if (str.equals(reverseString(str))) { //Check if string is equal to the reversed version
+		System.out.println("The inputted string is a palindrome");
+	} else {
+		System.out.println("The inputted string is not a palindrome");
+	}
+}

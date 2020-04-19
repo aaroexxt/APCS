@@ -1,0 +1,25 @@
+public boolean simulate() {
+	int curPos = 0;
+	for (int i=0; i<maxHops; i++) {
+		curPos+=hopDistance(); //do the hop
+		if (curPos >= goalDistance || curPos < 0) { //stop conditions
+			break; //stop hopping
+		}
+	}
+	return (curPos >= goalDistance);
+}
+
+public double runSimulations(int num) {
+	int successCount = 0;
+	int failCount = 0;
+
+	for (int i=0; i<num; i++) {
+		if (simulate()) {
+			successCount++;
+		} else {
+			failCount++;
+		}
+	}
+
+	return (double)successCount/(double)num; //return successes over total
+}
